@@ -1,10 +1,9 @@
 ---
 title: Getting Started
 author: Cotes Chung
-date: 2019-08-09 20:55:00 +0800
+date: 2019-08-13 20:55:00 +0800
 categories: [Blogging, Tutorial]
 tags: [getting started]
-pin: true
 ---
 
 ## Prerequisites
@@ -158,7 +157,7 @@ It depends on how you use the theme:
     ```diff
   - gem "jekyll-theme-chirpy", "~> 3.2", ">= 3.2.1"
   + gem "jekyll-theme-chirpy", "~> 3.3", ">= 3.3.0"
-    ```
+  ```
     {: .nolineno file="Gemfile" }
 
     And then execute the following command:
