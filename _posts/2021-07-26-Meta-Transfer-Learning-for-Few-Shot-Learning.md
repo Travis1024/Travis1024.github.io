@@ -34,7 +34,7 @@ math: true
 #### 3）UDA（无监督领域自适应）
 
 无监督领域自适应的任务是利用源域中已有的知识或者说标签信息去学习目标域的样本的类别；源域Ds和目标域Dt的数据经验分布不一样，在UDA任务中，同样需要寻找一种源域和目标域之间的共有特征。
-<img ssrc="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image@main//20210716151830.png" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image@main//20210716151830.png" style="zoom: 50%;" />
 
 假设现在有一个特征抽取器
 $$
@@ -167,7 +167,7 @@ $$
 
 少样本学习方法的技术路线如下图所示：
 
-![](https://img-blog.csdnimg.cn/img_convert/9183f36e4cf7a510e7569a34eb7a4073.png)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image@main//9183f36e4cf7a510e7569a34eb7a4073.png" style="zoom: 80%;" />
 
 该流程中主要可以划分为三个阶段：
 
