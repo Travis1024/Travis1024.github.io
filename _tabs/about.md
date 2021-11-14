@@ -5,4 +5,6 @@ order: 4
 ---
 
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+> **Hongxu Wei  [ Travis ]**
+
+Graduate student, School of computer science, Huazhong University of science and technology. I majored in Internet of Things Engineering in Xidian University during my undergraduate study. I have learned a lot about group identification technology based on mobile devices, and participated in the development of related projects. Currently, I am and will continue to learn knowledge in data mining, big data, real-time computing and other related fields.
