@@ -5,6 +5,7 @@ date: 2021-07-25 18:32:00 +0800
 categories: [Paper Summary]
 tags: [AI, Transfer Learning, Domain Adaptation]
 math: true
+pin: true
 ---
 
 # Time Series Domain Adaptation via Sparse Associative Structure Alignment

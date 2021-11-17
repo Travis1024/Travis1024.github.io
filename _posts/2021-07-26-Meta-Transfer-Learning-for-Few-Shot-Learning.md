@@ -5,6 +5,7 @@ date: 2021-07-26 18:32:00 +0800
 categories: [Paper Summary]
 tags: [AI, Transfer Learning]
 math: true
+pin: true
 ---
 
 # Meta-Transfer Learning for Few-Shot Learning
