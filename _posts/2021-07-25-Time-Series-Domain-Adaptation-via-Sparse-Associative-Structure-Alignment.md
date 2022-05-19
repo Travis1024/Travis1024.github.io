@@ -1,4 +1,4 @@
-﻿---
+---
 title: Time Series Domain Adaptation via Sparse Associative Structure Alignment （Domain Adaptation）
 author: Travis <Hongxu Wei>
 date: 2021-07-25 18:32:00 +0800
