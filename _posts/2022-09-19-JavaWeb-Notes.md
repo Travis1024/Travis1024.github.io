@@ -1,5 +1,5 @@
 ---
-title: JavaWeb笔记
+title: JavaWeb Notes
 author: Travis <Hongxu Wei>
 date: 2022-09-19 20:25:00 +0800
 categories: [Java Learning Space]
@@ -7,7 +7,7 @@ tags: [JavaWeb]
 math: false
 ---
 
-# JavaWeb笔记
+# JavaWeb Notes
 
 > Source：动力节点老杜（JavaWeb）
 
