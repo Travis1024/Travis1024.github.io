@@ -9,8 +9,6 @@ math: false
 
 # Mybatis Notes
 
->   来源：动力节点—老杜—Mybatis
-
 # 一、MyBatis概述
 
 ## 1.1 框架
@@ -34,7 +32,7 @@ math: false
 
 ## 1.2 三层架构
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659575815289-a76d30d9-f072-483a-bda7-b1fc8afc6f82.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<div align=center><img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209261948668.png" style="zoom:40%"/>
 
 - 表现层（UI）：直接跟前端打交互（一是接收前端ajax请求，二是返回json数据给前端）
 
@@ -152,7 +150,7 @@ math: false
 
 - 打开mybatis代码可以看到它的包结构中包含：ibatis
 
-    ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659580495482-02167fb7-a183-4337-bfbe-f9ab50e736d6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+    <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209261953924.png" style="zoom:50%"/>
 
 - ORM：对象关系映射
 
@@ -161,13 +159,11 @@ math: false
     - M（Mapping）：将Java虚拟机中的Java对象映射到数据库表中一行记录，或是将数据库表中一行记录映射成Java虚拟机中的一个Java对象。
     - ORM图示
 
-    ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659580953095-86e388ac-13b5-4448-b90a-2aacd36688ef.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_17%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-    ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659580965550-87c43dee-f1c4-4bdd-b15e-14f831b3d0da.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+    <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209261954098.png" style="zoom:40%"/>
 
     - MyBatis属于半自动化ORM框架。
     - Hibernate属于全自动化的ORM框架。
-
+    
 - MyBatis框架特点：
 
     - 支持定制化 SQL、存储过程、基本映射以及高级映射
@@ -206,16 +202,11 @@ math: false
 
 - 从github上下载，地址：https://github.com/mybatis/mybatis-3
 
-    ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659582991347-ee21a960-e4ae-45a0-83cf-74b3f1f3825c.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-    ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659583157781-fd860428-d25b-4c4c-9e68-0219de7d3ba9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
 - 将框架以及框架的源码都下载下来，下载框架后解压，打开mybatis目录
 
-    - ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659583275291-4ba5ba90-5420-449e-97f4-2ec759c994ca.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+    - <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291923168.png" style="zoom:50%"/>
     - 通过以上解压可以看到，框架一般都是以jar包的形式存在。我们的mybatis课程使用maven，所以这个jar我们不需要。
     - 官方手册需要。
-
 
 ## 2.3 MyBatis入门程序开发步骤
 
@@ -237,25 +228,25 @@ math: false
 
     - 使用navicat for mysql工具建表
 
-        ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659596348287-5876735d-ba3b-43d2-9e73-1c4bdb29e8b5.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+        <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291924829.png" style="zoom:45%"/>
 
     - 使用navicat for mysql工具向t_car表中插入两条数据，如下：
 
-        ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659596615335-60a93468-5a9e-48b8-acb7-cb4be313b8f1.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+        <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291925094.png" style="zoom:45%"/>
 
     - 创建Project：建议创建Empty Project，设置Java版本以及编译版本等。
 
-        ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659585665160-94c930e0-611c-46fa-b87d-aa9489ec85c8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+        <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291926220.png" style="zoom:40%"/>
 
-        ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659585756219-b17df6ac-8bb8-4d3e-bd4b-44f5d41c41c0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_21%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+        <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291927993.png" style="zoom:40%"/>
 
     - 设置IDEA的maven
 
-        ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659586287914-4b6d4e74-f5f4-4800-901e-04f017d65ce0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_28%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+        <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291939546.png" style="zoom:45%"/>
 
     - 创建Module：普通的Maven Java模块
 
-        ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659586416938-a08b3128-4232-425b-a4a0-958956c52bc8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+        <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291940609.png" style="zoom:45%"/>
 
 - 步骤1：打包方式：jar（不需要war，因为mybatis封装的是jdbc。）
 
@@ -384,9 +375,7 @@ math: false
 
 - 步骤6：运行程序，查看运行结果，以及数据库表中的数据
 
-    ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659599289005-00bae72a-c64f-41b5-9b87-162f8958efa5.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-    ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659599334361-3c2733c1-29d5-474c-a217-552ec331b523.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_17%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+    <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291942594.png" style="zoom:45%"/>
 
 ## 2.4 关于MyBatis核心配置文件的名字和路径详解
 
@@ -432,7 +421,7 @@ math: false
 
 以上程序运行后，看到数据库表t_car中又新增一条数据，如下（成功了）：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659600237949-1e023d27-7d43-4eb5-ad3d-56464d6cd38d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291943265.png" style="zoom:45%"/>
 
 经过测试说明mybatis核心配置文件的名字是随意的，存放路径也是随意的。
 
@@ -489,7 +478,7 @@ public class MyBatisCompleteCodeTest {
 
 运行后数据库表的变化：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659604100979-edc9b06f-93bb-4c55-880b-38e219d9d9e3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_17%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291943617.png" style="zoom:45%"/>
 
 ## 2.6 引入JUnit
 
@@ -527,31 +516,23 @@ public class MyBatisCompleteCodeTest {
         - 测试用例的名字以及每个测试方法的定义都是有规范的：
 
             - 测试用例的名字：XxxTest
-
-
             - 测试方法声明格式：public void test业务方法名(){}
-
-
-        ```java
-        // 测试用例
-        public class CarMapperTest{
-        	// 测试方法
-            @Test
-            public void testInsert(){}
-        
-            @Test
-            public void testUpdate(){}
-        }
-        ```
-
-
-​        
-
+    
+            ```java
+            // 测试用例
+            public class CarMapperTest{
+            	// 测试方法
+            	@Test
+            	public void testInsert(){}
+            
+            	@Test
+            	public void testUpdate(){}
+            }
+            ```
+    
     - 第三步：可以在类上执行，也可以在方法上执行
     
         - 在类上执行时，该类中所有的测试方法都会执行。
-
-
         - 在方法上执行时，只执行当前的测试方法。
 
 
@@ -598,7 +579,7 @@ public class MyBatisCompleteCodeTest {
 
 执行单元测试，查看数据库表的变化：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659604159905-5853a1c1-b266-4a74-8f25-8b7a326d84d6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291946162.png" style="zoom:45%"/>
 
 ## 2.7 引入日志框架logback
 
@@ -674,7 +655,7 @@ public class MyBatisCompleteCodeTest {
 
 - 再次执行单元测试方法testInsertCar，查看控制台是否有sql语句输出
 
-    ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659610464472-e3b9e8b9-d29b-4f9b-ad34-dab427fe3a45.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+    <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291946122.png"/>
 
 ## 2.8 MyBatis工具类SqlSessionUtil的封装
 
@@ -831,7 +812,7 @@ SQL语句这样写：
 
 **#{} 的里面必须填写map集合的key，不能随便写。**运行测试程序，查看数据库：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659666309110-2c00ecfe-1777-4c9a-8baa-1bc4e4ab47a0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291947956.png" style="zoom:45%"/>
 
 如果#{}里写的是map集合中不存在的key会有什么问题？
 
@@ -849,9 +830,7 @@ SQL语句这样写：
 
 运行程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659666601236-f892944d-8725-4816-b34c-621a9380eda8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_44%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659666614107-2df4bd58-105b-4b76-881d-e1d19b4d4b98.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291948504.png" style="zoom:50%"/>
 
 通过测试，看到程序并没有报错。正常执行。不过 #{kk} 的写法导致无法获取到map集合中的数据，最终导致数据库表car_num插入了NULL。
 
@@ -884,7 +863,7 @@ SQL语句做如下修改，这样可以增强程序的可读性：
 
 运行程序，查看数据库表：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659667098369-a13a16ec-6f02-44f2-85b7-8834b9ca161b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291948935.png" style="zoom:45%"/>
 
 使用Map集合可以传参，那使用**pojo**（简单普通的java对象）可以完成传参吗？测试一下：
 
@@ -1001,7 +980,7 @@ SQL语句做如下修改，这样可以增强程序的可读性：
 
 - 运行程序，查看数据库表：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659668224378-2070e0f4-8252-4978-8204-bb247d172152.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291949173.png" style="zoom:45%"/>
 
 #{} 里写的是POJO的属性名，如果写成其他的会有问题吗？
 
@@ -1013,17 +992,17 @@ SQL语句做如下修改，这样可以增强程序的可读性：
 
 运行程序，出现了以下异常：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659668583320-e0b198ac-df57-47f9-8520-7bb86f4b56fe.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_44%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291950756.png" style="zoom:45%"/>
 
 错误信息中描述：在Car类中没有找到a属性的getter方法。
 
 修改POJO类Car的代码，**只将getCarNum()方法名修改为getA()，其他代码不变**，如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659668831506-d7700b47-d87a-417b-bd86-46467edd968c.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291950269.png" style="zoom:40%"/>
 
 再运行程序，查看数据库表中数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659668909618-59bddd05-fcfa-41cc-8c87-a7bcd7060c2f.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291951234.png" style="zoom:45%"/>
 
 **经过测试得出结论：**
 
@@ -1070,7 +1049,7 @@ public void testDeleteByCarNum(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659671944122-784bbd93-06dc-4faf-a18a-6beef6cf15b5.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_37%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291951943.png" style="zoom:45%"/>
 
 **注意：当占位符只有一个的时候，${} 里面的内容可以随便写。**
 
@@ -1080,7 +1059,7 @@ public void testDeleteByCarNum(){
 
 修改前：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659680723161-c7563b14-b4f7-4467-90b5-4dfca148ca83.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_17%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291952810.png" style="zoom:45%"/>
 
 SQL语句如下：
 
@@ -1117,9 +1096,7 @@ public void testUpdateCarByPOJO(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659681449799-48b44db3-d006-452c-8bd8-d088850c4394.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659681391738-02de5e94-8880-4754-b08a-0e807362ba3c.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291953267.png" style="zoom:45%"/>
 
 当然了，如果使用**map**传数据也是可以的。
 
@@ -1174,7 +1151,7 @@ public void testSelectCarById(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659683102262-63ca0c28-9c36-4177-abdd-292a8ab2dcbb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_39%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291954854.png" style="zoom:45%"/>
 
 运行后之前的异常不再出现了，这说明添加了resultType属性之后，解决了之前的异常，可以看出resultType是不能省略的。
 
@@ -1202,7 +1179,7 @@ Car类的属性名：id, carNum, brand, guidePrice, produceTime, carType
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659684140382-c8d05a79-7906-4a8f-8301-3cd8097b3eff.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_38%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291954621.png" style="zoom:45%"/>
 
 通过测试得知，如果当查询结果的字段名和java类的属性名对应不上的话，可以采用as关键字起别名，**当然还有其它解决方案，我们后面再看**。
 
@@ -1240,7 +1217,7 @@ public void testSelectCarAll(){
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659685063045-cbeabc75-de94-400b-8d41-ee797076b1a0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_37%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291955877.png" style="zoom:45%"/>
 
 ## 3.5 关于SQL Mapper的namespace
 
@@ -1316,7 +1293,7 @@ public void testNamespace(){
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659686031615-93ca679e-0695-4984-bc4c-af596fe5f2a0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_37%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291956197.png" style="zoom:45%"/>
 
 # 四、MyBatis核心配置文件详解
 
@@ -1497,9 +1474,9 @@ public class ConfigurationTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660117624656-64973cf7-6700-43da-96fa-5960dfc5045b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_46%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291957618.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660117692466-ecd6317f-5868-4858-a33c-0c7ec68044ac.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291957173.png" style="zoom:45%"/>
 
 ## 4.2 transactionManager
 
@@ -1615,7 +1592,7 @@ public void testDataSource() throws Exception{
 
 当type是UNPOOLED，控制台输出：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660125487038-29390827-4e20-431a-8d62-f56a40bf0349.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291958085.png" style="zoom:45%"/>
 
 修改配置文件mybatis-config3.xml中的配置：
 
@@ -1625,7 +1602,7 @@ public void testDataSource() throws Exception{
 
 Java测试程序不需要修改，直接执行，看控制台输出：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660125701333-b14f63d8-c442-4211-ad77-884f21162357.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_46%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291958817.png" style="zoom:45%"/>
 
 通过测试得出：UNPOOLED不会使用连接池，每一次都会新建JDBC连接对象。POOLED会使用数据库连接池。【这个连接池是mybatis自己实现的。】
 
@@ -1686,7 +1663,7 @@ poolTimeToWait：当无法获取到空闲连接时，每隔20秒打印一次日�
 
 下图是默认配置：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660126871013-88f83ea4-94e9-4088-bdb4-06a4fd73866a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_18%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291959532.png" style="zoom:45%"/>
 
 在以上配置的基础之上，可以编写java程序测试：
 
@@ -1708,7 +1685,7 @@ public void testPool() throws Exception{
 </select>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660128646511-8df1006a-dd85-48d1-9b88-ce7969d9b546.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_43%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209291959788.png" style="zoom:45%"/>
 
 ## 4.4 properties
 
@@ -1948,7 +1925,7 @@ public class ParseXMLByDom4j {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660182883453-edbe3196-015a-4c7e-b318-1593089d5496.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292000368.png" style="zoom:40%"/>
 
 第四步：编写配置文件sqlmapper.xml
 
@@ -2001,7 +1978,7 @@ public void testSqlMapper() throws Exception{
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660183887361-baffabf0-4caa-4e64-86d0-5d5dcfb1edd6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_42%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292000532.png" style="zoom:45%"/>
 
 ## 5.2 GodBatis
 
@@ -2832,11 +2809,11 @@ public int insert(String sqlId, Object obj) {
 
 ## 5.3 GodBatis使用Maven打包
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660206374772-d21754cb-0c5f-4a14-921e-d083b4a791c3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_14%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292001787.png" style="zoom:45%"/>
 
 查看本地仓库中是否已经有jar包：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660206446577-20e8dd84-6b05-48c8-a693-cb0dadfb7979.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_14%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292001166.png" style="zoom:45%"/>
 
 ## 5.4 使用GodBatis
 
@@ -2844,7 +2821,7 @@ public int insert(String sqlId, Object obj) {
 
 第一步：准备数据库表t_user
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660206701289-4ed4661b-7c85-4157-b09c-3a7fe5207399.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_23%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292002708.png" style="zoom:45%"/>
 
 第二步：创建模块，普通的Java Maven模块：godbatis-test
 
@@ -3035,11 +3012,9 @@ public class GodBatisTest {
 
 第八步：运行结果
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660209177038-ecf701a2-1211-4f0c-b1f6-e2e16c1617d5.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292003145.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660209186576-54493410-47b7-4496-8007-471473cc6fc6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660209193124-908993c5-90d6-4426-a598-7aeac2a6b791.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_23%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
 ## 5.5 总结MyBatis框架的重要实现原理
 
@@ -3085,13 +3060,13 @@ public class GodBatisTest {
 
 ## 6.1 需求描述
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660274775552-da896b17-09dd-455a-899e-eb4f36fc0ced.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_14%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292004400.png" style="zoom:40%"/>
 
 ## 6.2 数据库表的设计和准备数据
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660275027117-dcf9ec03-01fa-4e93-8edb-7e10456ba51f.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292005984.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660275097707-2621f88d-9c21-4d4e-aa6c-c90e1c6e4e3b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_14%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+
 
 ## 6.3 实现步骤
 
@@ -3099,26 +3074,26 @@ public class GodBatisTest {
 
 - IDEA中创建Maven WEB应用（**mybatis-004-web**）
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660275706327-2116fb91-fe1a-449d-bd62-6f15416dba84.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292005087.png" style="zoom:45%"/>
 
 - IDEA配置Tomcat，这里Tomcat使用10+版本。并部署应用到tomcat。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660296669590-e7e4932f-cdfb-4d82-9711-af0ca18bbe81.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_30%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292006973.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660296712190-729ead72-375d-417f-852a-ef366c38c1c3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_30%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292006334.png" style="zoom:45%"/>
 
 - 默认创建的maven web应用没有java和resources目录，包括两种解决方案
     - 第一种：自己手动加上。
     
-        ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660297753549-b90c4f4c-2f8f-404d-9ff7-c350d8cd21e0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+        <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292007215.png" style="zoom:45%"/>
     
     - 第二种：修改maven-archetype-webapp-1.4.jar中的配置文件
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660297555336-bef8649f-7e24-477c-9e0a-e55ed1b009a6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292010006.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660297620748-1062587b-feff-472a-a546-e5489aebdbdc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_21%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292011528.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660297684026-b50cdd30-80d2-488d-9632-a0a098a3518e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_23%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292011016.png" style="zoom:45%"/>
 
 - web.xml文件的版本较低，可以从tomcat10的样例文件中复制，然后修改
 
@@ -3617,11 +3592,9 @@ public class AccountController extends HttpServlet {
 
 启动服务器，打开浏览器，输入地址：http://localhost:8080/bank，测试：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660548722867-8ae16c8b-f25c-4fc7-b0bb-8c8f0c5e546a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292012768.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660551569099-4d81d8cd-35c5-418f-9de1-74ef8641a59f.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660551655159-a814927f-dba4-4d81-b6a8-93bdc8511e79.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
 ## 6.4 MyBatis对象作用域以及事务问题
 
@@ -3696,17 +3669,15 @@ public class AccountServiceImpl implements AccountService {
 
 运行前注意看数据库表中当前的数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660551655159-a814927f-dba4-4d81-b6a8-93bdc8511e79.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292012247.png" style="zoom:45%"/>
 
 执行程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552525960-fb4d555f-09a1-4120-b0b3-73c3eeb2201a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292013971.png" style="zoom:45%"/>
 
 再次查看数据库表中的数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552552430-359a34ff-d869-43a9-b1e3-caa335a4a2f4.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292013535.png" style="zoom:45%"/>
 
 **傻眼了吧！！！事务出问题了，转账失败了，钱仍然是少了1万。这是什么原因呢？主要是因为service和dao中使用的SqlSession对象不是同一个。**
 
@@ -3847,35 +3818,15 @@ public class AccountServiceImpl implements AccountService {
 
 当前数据库表中的数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552552430-359a34ff-d869-43a9-b1e3-caa335a4a2f4.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-再次运行程序：
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552525960-fb4d555f-09a1-4120-b0b3-73c3eeb2201a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-查看数据库表：没有问题。
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552552430-359a34ff-d869-43a9-b1e3-caa335a4a2f4.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-再测试转账成功：
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660551569099-4d81d8cd-35c5-418f-9de1-74ef8641a59f.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660553732975-bdd952c5-c2c8-4cda-b9f7-810120c66485.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292014993.png" style="zoom:45%"/>
 
 如果余额不足呢：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660553844177-0db1b3c9-3663-4a96-abb0-d516f24c36b8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660553856988-09e342be-fa3c-4467-9541-d785a08276e9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292015942.png" style="zoom:45%"/>
 
 账户的余额依然正常：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660553732975-bdd952c5-c2c8-4cda-b9f7-810120c66485.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292015667.png" style="zoom:45%"/>
 
 ## 6.5 分析当前程序存在的问题
 
@@ -3967,11 +3918,11 @@ public class JavassistTest {
 - --add-opens java.base/java.lang=ALL-UNNAMED
 - --add-opens java.base/sun.net.util=ALL-UNNAMED
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660559749329-9288db13-204c-4354-a5ce-1190f78cb044.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_21%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292016617.png" style="zoom:45%"/>
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660559790161-90a4cae2-67be-4827-b981-b28910d9684e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292016373.png" style="zoom:45%"/>
 
 ## 7.2 使用Javassist生成DaoImpl类
 
@@ -4095,23 +4046,21 @@ public class GenerateDaoByJavassist {
 
 修改service类中获取dao对象的代码：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660610966694-3e0ab830-8cd1-41ff-aac6-d973e6b5177d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292016353.png" style="zoom:45%"/>
 
 启动服务器：**启动过程中显示，tomcat服务器自动添加了以下的两个运行参数。所以不需要再单独配置。**
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660611357131-c6f21e3e-4c8a-4f72-b519-e635d847f1fd.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_35%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292017248.png" style="zoom:45%"/>
 
 测试前数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660611193608-b788a3d3-7ed2-4673-aff4-b687d5f20e71.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292017334.png" style="zoom:45%"/>
 
 打开浏览器测试：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660611220579-a56a8f6c-0416-4d7a-a9f5-cf36a6b8fc9a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292018508.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660611246094-32c692fc-597a-452f-91cf-b0233f9ce020.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660611264464-7f47cce8-0581-496a-b04a-e756eec622df.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
 # 八、MyBatis中接口代理机制及使用
 
@@ -4125,15 +4074,15 @@ AccountDao accountDao = (AccountDao)sqlSession.getMapper(AccountDao.class);
 
 将service中获取dao对象的代码再次修改，如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660611871663-27d92f0e-e0f5-4ab5-9a6e-be949a5b5469.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292018278.png" style="zoom:45%"/>
 
 测试前数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660611965066-a4188327-2a59-4125-bd2d-0aa40fb8bf3a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_14%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292019564.png" style="zoom:45%"/>
 
 测试后数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660612013927-a1434b4e-ac2c-4ccb-8747-8594a902babc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292019028.png" style="zoom:45%"/>
 
 # 九、MyBatis小技巧
 
@@ -4401,7 +4350,7 @@ public class CarMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660617419624-9c151df7-6c1e-469b-8489-2694009e68b6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292020646.png" style="zoom:45%"/>
 
 通过执行可以清楚的看到，sql语句中是带有 ? 的，这个 ? 就是大家在JDBC中所学的占位符，专门用来接收值的。
 
@@ -4436,11 +4385,11 @@ CarMapper.xml文件修改如下：
 
 再次运行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660617746157-bdb389c7-5752-42f7-a023-c0b8792cf604.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_33%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292020587.png" style="zoom:45%"/>
 
 出现异常了，这是为什么呢？看看生成的sql语句：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660617813209-5e0d9395-452b-42ed-bee2-816d41f17c30.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292021829.png" style="zoom:45%"/>
 
 很显然，${} 是先进行sql语句的拼接，然后再编译，出现语法错误是正常的，因为 燃油车 是一个字符串，在sql语句中应该添加单引号
 
@@ -4468,7 +4417,7 @@ CarMapper.xml文件修改如下：
 
 再执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660618019174-42718d2b-7cdd-4c70-8a44-055258d5ad29.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_46%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292021467.png" style="zoom:45%"/>
 
 通过以上测试，可以看出，对于以上这种需求来说，还是建议使用 #{} 的方式。
 
@@ -4519,7 +4468,7 @@ public void testSelectAll(){
 
 运行：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660619431786-c9ac3a1d-c9f7-494f-bfe3-496ce4beb914.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292021481.png" style="zoom:45%"/>
 
 报错的原因是sql语句不合法，因为采用这种方式传值，最终sql语句会是这样：
 
@@ -4543,7 +4492,7 @@ desc是一个关键字，不能带单引号的，所以在进行sql语句关键�
 
 再次执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660619635336-168c3097-fe96-49aa-b855-d111f5f6e66d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292022416.png" style="zoom:45%"/>
 
 ### 拼接表名
 
@@ -4582,13 +4531,11 @@ public void testSelectAllByTableName(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660798482963-16baeed4-cd22-4a0e-a631-6f49ee9f101b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292022314.png" style="zoom:45%"/>
 
 ### 批量删除
 
 业务背景：一次删除多条记录。
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660799087155-ec264d4c-cafa-458d-85b9-f18b4c34bafd.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
 对应的sql语句：
 
@@ -4630,7 +4577,7 @@ public void testDeleteBatch(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660803646232-44b4c7ca-119d-45ce-83c1-aefa2e3c6255.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292023353.png" style="zoom:40%"/>
 
 ### 模糊查询
 
@@ -4669,7 +4616,7 @@ public void testSelectLikeByBrand(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660804429027-895f9a7b-5a1d-4ecd-b5b4-81dbca8ee101.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_45%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292024892.png" style="zoom:45%"/>
 
 #### 使用#{}
 
@@ -4689,7 +4636,7 @@ public void testSelectLikeByBrand(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660804562331-8febb980-24d8-4e18-8e4b-6416f28aa251.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_45%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292024783.png" style="zoom:45%"/>
 
 第二种：双引号方式
 
@@ -4704,8 +4651,7 @@ public void testSelectLikeByBrand(){
 </select>
 ```
 
-
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660804873326-12cbff35-f4fe-4019-90a4-7b758d7c4e39.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_44%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292025323.png" style="zoom:45%"/>
 
 ## 9.2 typeAliases
 
@@ -4886,7 +4832,7 @@ SQL映射文件的配置方式包括四种：
 
 mybatis-config.xml和SqlMapper.xml文件可以在IDEA中提前创建好模板，以后通过模板创建配置文件。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660629382298-df2d0e70-d8ce-4ae6-9f19-e74923adf121.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_28%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292025870.png" style="zoom:45%"/>
 
 ## 9.5 插入数据时获取自动生成的主键
 
@@ -4894,7 +4840,7 @@ mybatis-config.xml和SqlMapper.xml文件可以在IDEA中提前创建好模板，
 
 业务背景：一个用户有多个角色。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660808179627-69b14158-fbd4-4189-83cf-aa944fe26fa1.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292026336.png" style="zoom:45%"/>
 
 插入一条新的记录之后，自动生成了主键，而这个主键需要在其他表中使用时。
 
@@ -4942,11 +4888,11 @@ public void testInsertUseGeneratedKeys(){
 
 表：t_student
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660634643604-17c32925-3d16-4477-84be-296ef44509a0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292026676.png" style="zoom:45%"/>
 
 表中现有数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660635212357-e422625b-d176-4189-ad30-7b9dad1b5dd9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292026583.png" style="zoom:45%"/>
 
 pojo类：
 
@@ -5225,7 +5171,7 @@ public void testSelectByNameAndSex(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660641021618-ce3ac913-fe10-45f5-9760-3e51ef2dd864.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292027558.png" style="zoom:45%"/>
 
 异常信息描述了：name参数找不到，可用的参数包括[arg1, arg0, param1, param2]
 
@@ -5241,7 +5187,7 @@ public void testSelectByNameAndSex(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660641284279-64a7312a-d036-448f-aaef-a1bcde8abba2.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292027253.png" style="zoom:45%"/>
 
 再次尝试修改StudentMapper.xml文件
 
@@ -5312,7 +5258,7 @@ public void testSelectByNameAndAge(){
 
 ## 10.6 @Param源码分析
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660643136419-5851b57a-ae96-4488-bb0c-8864c92771f3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_28%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292028971.png" style="zoom:45%"/>
 
 
 
@@ -5396,7 +5342,7 @@ public class CarMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660810312287-ddfb6d00-1e96-425b-b4e6-fd6cdb8a9593.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292028475.png" style="zoom:45%"/>
 
 **查询结果是一条的话可以使用List集合接收吗？当然可以**。
 
@@ -5425,7 +5371,7 @@ public void testSelectByIdToList(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660810652140-a438fba7-c21c-488a-9d18-c0383262f1dc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_33%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292031587.png" style="zoom:45%"/>
 
 ## 11.2 返回List<Car>
 
@@ -5456,7 +5402,7 @@ public void testSelectAll(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660816141237-79a6a966-d3ec-4f7b-bc38-b1adb5df8fee.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292031546.png" style="zoom:45%"/>
 
 如果返回多条记录，采用单个实体类接收会怎样？
 
@@ -5485,7 +5431,7 @@ public void testSelectAll2(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660816549528-b600f5a9-81b4-4725-87c7-b933ee60ca39.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_39%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292032443.png" style="zoom:45%"/>
 
 ## 11.3 返回Map
 
@@ -5493,7 +5439,7 @@ public void testSelectAll2(){
 
 查询如果可以保证只有一条数据，则返回一个Map集合即可。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660816974662-61782965-88fb-466e-a5ff-5af02ab614df.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292032062.png" style="zoom:45%"/>
 
 ```java
 /**
@@ -5523,7 +5469,7 @@ public void testSelectByIdRetMap(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660817561293-68e25ddd-ed72-4121-99f6-35617d2ae0b0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292033946.png" style="zoom:45%"/>
 
 当然，如果返回一个Map集合，可以将Map集合放到List集合中吗？当然可以，这里就不再测试了。
 
@@ -5533,7 +5479,7 @@ public void testSelectByIdRetMap(){
 
 查询结果条数大于等于1条数据，则可以返回一个存储Map集合的List集合。List<Map>等同于List<Car>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660817896708-0f3d0b44-4a0e-40ed-b609-b4d0e5fce1b6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292033179.png" style="zoom:45%"/>
 
 ```java
 /**
@@ -5572,7 +5518,7 @@ public void testSelectAllRetListMap(){
 
 **拿Car的id做key，以后取出对应的Map集合时更方便。**
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660818043977-d5c56423-c5db-43ca-9c0c-eaa3f22a8f21.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_23%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292034269.png" style="zoom:45%"/>
 
 ```java
 /**
@@ -5741,7 +5687,7 @@ public void testSelectTotal(){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660874705835-bd2767b1-c547-4a72-b7d7-229a3c89d74a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_39%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292035165.png" style="zoom:45%"/>
 
 
 
@@ -5751,13 +5697,11 @@ public void testSelectTotal(){
 
 - 批量删除
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660799087155-ec264d4c-cafa-458d-85b9-f18b4c34bafd.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
-
-delete from t_car where id in(1,2,3,4,5,6,......这里的值是动态的，根据用户选择的id不同，值是不同的);
+​		delete from t_car where id in(1,2,3,4,5,6,......这里的值是动态的，根据用户选择的id不同，值是不同的);
 
 - 多条件查询
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660876082121-d5ea8e08-e642-4716-b201-79cfe3849624.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292123479.png" style="zoom:45%"/>
 
 select * from t_car where brand like '丰田%' and guide_price > 30 and .....;
 
@@ -5853,7 +5797,7 @@ public class CarMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660889544842-34404e94-66f2-48e5-b58a-784d6b91ee27.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_30%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292125088.png" style="zoom:45%"/>
 
 如果第一个条件为空，剩下两个条件不为空，会是怎样呢？
 
@@ -5863,17 +5807,17 @@ List<Car> cars = mapper.selectByMultiCondition("", 20.0, "燃油车");
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660889738193-d5023b6c-13a9-447f-a128-45b36663c8f1.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292126748.png" style="zoom:45%"/>
 
 报错了，SQL语法有问题，where后面出现了and。这该怎么解决呢？
 
 - 可以where后面添加一个恒成立的条件。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660889965103-5e519823-a741-4ebf-b930-e10ffc9a4129.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292126880.png" style="zoom:45%"/>
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660890083737-c8716d78-9e2d-4a22-bf56-12ff94b688f5.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_28%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292127842.png" style="zoom:45%"/>
 
 如果三个条件都是空，有影响吗？
 
@@ -5883,7 +5827,7 @@ List<Car> cars = mapper.selectByMultiCondition("", null, "");
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660890238928-6f889bdf-9702-4cd7-a0ef-b875977f42f9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_18%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292128226.png" style="zoom:45%"/>
 
 三个条件都不为空呢？
 
@@ -5893,7 +5837,7 @@ List<Car> cars = mapper.selectByMultiCondition("丰田", 20.0, "燃油车");
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660890374052-89bc29a1-3aeb-4941-b33f-fbbbe4fbbd39.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_29%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292128140.png" style="zoom:45%"/>
 
 ## 12.2 where标签
 
@@ -5943,7 +5887,7 @@ public void testSelectByMultiConditionWithWhere(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660891031758-ce20585a-6bad-452e-b186-09cf465fecc6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_28%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292129604.png" style="zoom:45%"/>
 
 如果所有条件都是空呢？
 
@@ -5953,7 +5897,7 @@ List<Car> cars = mapper.selectByMultiConditionWithWhere("", null, "");
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660891127310-9847b1b5-2bf4-42f9-8e73-38b051b398de.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_14%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292130046.png" style="zoom:45%"/>
 
 它可以自动去掉前面多余的and，那可以自动去掉前面多余的or吗？
 
@@ -5981,7 +5925,7 @@ List<Car> cars = mapper.selectByMultiConditionWithWhere("丰田", 20.0, "燃油�
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660891540196-f2e055dd-74a7-40f9-a883-c78a5e2d28b7.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_25%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292130717.png" style="zoom:45%"/>
 
 它可以自动去掉前面多余的and，那可以自动去掉后面多余的and吗？
 
@@ -6009,7 +5953,7 @@ List<Car> cars = mapper.selectByMultiConditionWithWhere("丰田", 20.0, "");
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660891786608-272a3ab9-96f8-42bc-b5df-4d275cfe9cfe.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292131123.png" style="zoom:45%"/>
 
 很显然，后面多余的and是不会被去除的。
 
@@ -6059,7 +6003,7 @@ public void testSelectByMultiConditionWithTrim(){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660894051788-34d9dd44-612e-424e-bf0a-143bea4b36bd.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292131563.png" style="zoom:45%"/>
 
 如果所有条件为空，where会被加上吗？
 
@@ -6069,7 +6013,7 @@ List<Car> cars = mapper.selectByMultiConditionWithTrim("", null, "");
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660894220001-e789ea6b-a219-4f3d-8670-b9612d1d8274.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292132087.png" style="zoom:45%"/>
 
 ## 12.4 set标签
 
@@ -6113,7 +6057,7 @@ public void testUpdateWithSet(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660895330743-edd9f2e6-8cd0-4cbe-9c73-adf009466e38.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292132530.png" style="zoom:45%"/>
 
 ## 12.5 choose when otherwise
 
@@ -6189,7 +6133,7 @@ public void testSelectWithChoose(){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660896273467-9ba1d6c0-9cc3-4deb-92e5-0f54b4ade614.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292133435.png" style="zoom:45%"/>
 
 ## 12.6 foreach标签
 
@@ -6248,7 +6192,7 @@ public void testDeleteBatchByForeach(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660899240200-ab225394-27f1-4ec1-94e0-b2b3d3a9b16e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_21%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292133420.png" style="zoom:45%"/>
 
 - 用or来删除
 
@@ -6282,7 +6226,7 @@ public void testDeleteBatchByForeach2(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660899667194-f150bf6b-b54f-432a-8455-4c819bac0c58.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_19%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292134824.png" style="zoom:45%"/>
 
 ### 批量添加
 
@@ -6320,7 +6264,7 @@ public void testInsertBatchByForeach(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660900226070-90533bde-4129-49b5-9fa7-639aa07c3b03.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292134987.png" style="zoom:45%"/>
 
 ## 12.7 sql标签与include标签
 
@@ -6363,9 +6307,9 @@ include标签用来将声明的sql片段包含到某个sql语句当中
 
 准备数据库表：一个班级对应多个学生。班级表：t_clazz。学生表：t_student
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661132819754-23adfa1c-b325-41bc-8520-0355fe4c41cc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292135585.png" style="zoom:45%"/>
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661132610940-7d55793b-df68-48f4-924f-99db58220da9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+
 
 创建pojo：Student、Clazz
 
@@ -6516,7 +6460,7 @@ public class StudentMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661134833921-9452c17c-3461-4c7f-8807-55aa3e089506.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_33%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292136507.png" style="zoom:45%"/>
 
 ### 第二种方式：association
 
@@ -6599,7 +6543,7 @@ public interface ClazzMapper {
 
 执行结果，可以很明显看到先后有两条sql语句执行：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151746372-e3c91810-bb5f-4308-8dd5-e421e11bff50.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292136839.png" style="zoom:45%"/>
 
 分步优点：
 
@@ -6639,7 +6583,7 @@ public class StudentMapperTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151882965-633f8039-c309-4657-8ed1-44f836d5b1e4.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_23%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292137725.png" style="zoom:45%"/>
 
 如果后续需要使用到学生所在班级的名称，这个时候才会执行关联的sql语句，修改测试程序：
 
@@ -6660,13 +6604,13 @@ public class StudentMapperTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151926961-a0affa2d-2d89-4b67-8cc0-bf8604ded4fc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292137047.png" style="zoom:45%"/>
 
 通过以上的执行结果可以看到，只有当使用到班级名称之后，才会执行关联的sql语句，这就是延迟加载。
 
 在mybatis中如何开启全局的延迟加载呢？需要setting配置，如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661136161612-a7c3cc7f-fe89-4245-a297-1572d8384566.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_43%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292138903.png" style="zoom:45%"/>
 
 ```xml
 <settings>
@@ -6695,7 +6639,7 @@ public class StudentMapperTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151954051-4b5b94f7-a69d-4d21-b220-1a840862fb85.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292140771.png" style="zoom:45%"/>
 
 通过以上的测试可以看出，我们已经开启了全局延迟加载策略。
 
@@ -6712,7 +6656,7 @@ public class StudentMapperTest {
 </resultMap>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151998854-a31c19fb-0af9-4d69-894d-e8086d9c0333.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292140540.png" style="zoom:45%"/>
 
 这样的话，针对某个特定的sql，你就关闭了延迟加载机制。
 
@@ -6808,7 +6752,7 @@ public class ClazzMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661149977323-90515301-4b5b-4e3e-a17f-04d5473766e7.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_46%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292141475.png" style="zoom:45%"/>
 
 ### 第二种方式：分步查询
 
@@ -6848,7 +6792,7 @@ List<Student> selectByCid(Integer cid);
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151398803-0c0e196e-6c0a-42fb-b9ee-abd42fea2026.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292141867.png" style="zoom:50%"/>
 
 ## 13.4 一对多延迟加载
 
@@ -6960,7 +6904,7 @@ public class CarMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661154607492-3eba8947-5dda-4562-b156-2d3fe63b12a0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_31%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292142900.png" style="zoom:45%"/>
 
 什么情况下不走缓存？
 
@@ -6990,11 +6934,11 @@ void insertAccount();
 </insert>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661155578490-1b1d260d-991a-44ef-8c94-ba68796c7f03.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292142179.png" style="zoom:45%"/>
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661155640234-bdba6b74-80cf-4604-8185-fd504994150d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_30%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292143326.png" style="zoom:45%"/>
 
 ## 14.2 二级缓存
 
@@ -7039,13 +6983,13 @@ public void testSelectById2() throws Exception{
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661157492039-a04066a4-a824-4125-8533-e323bfd8bfdb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292143252.png" style="zoom:45%"/>
 
 **二级缓存的失效：只要两次查询之间出现了增删改操作。二级缓存就会失效。【一级缓存也会失效】**
 
 **二级缓存的相关配置：**
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661158385819-8074adeb-f769-48f5-8519-a79a515e8631.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_19%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292144759.png" style="zoom:45%"/>
 
 1. **eviction：指定从缓存中移除某个对象的淘汰算法。默认采用LRU策略。**
     1. LRU：Least Recently Used。最近最少使用。优先淘汰在间隔时间内使用频率最低的对象。(其实还有一种淘汰算法LFU，最不常用。)
@@ -7141,7 +7085,7 @@ public void testSelectById2() throws Exception{
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661162595603-3aeecedf-d1f5-4b53-bd76-ee3c52f014fd.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292144614.png" style="zoom:45%"/>
 
 
 
@@ -7266,7 +7210,7 @@ public void testSelectById2() throws Exception{
 
 ### 第四步：运行插件
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661220807303-79730f99-9a3c-4394-a29f-910eccd698cc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292145996.png" style="zoom:45%"/>
 
 ## 15.2 测试逆向工程生成的是否好用
 
@@ -7451,7 +7395,7 @@ public class PageTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661239750003-ff5657d8-9d9a-4c96-b908-eb5a644525bd.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_31%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292145342.png" style="zoom:45%"/>
 
 获取数据不难，难的是获取分页相关的数据比较难。可以借助mybatis的PageHelper插件。
 
@@ -7547,7 +7491,7 @@ mybatis中也提供了注解式开发方式，采用注解可以减少Sql映射�
 
 使用注解编写复杂的SQL是这样的：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661243511174-55bc0ee4-9561-448d-ad21-f02591d88798.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292147715.png" style="zoom:50%"/>
 
 原则：简单sql可以注解。复杂sql使用xml。
 
@@ -7671,4 +7615,4 @@ public void testSelectById() throws Exception{
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661245790082-b0ae21de-bdc7-41ba-a937-31bad62d1ade.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_30%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209292147248.png" style="zoom:45%"/>
