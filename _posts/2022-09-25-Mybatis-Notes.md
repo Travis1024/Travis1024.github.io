@@ -4,7 +4,7 @@ author: Travis <Hongxu Wei>
 date: 2022-09-25 23:25:00 +0800
 categories: [Java Learning Space]
 tags: [Mybatis]
-math: false
+math: true
 ---
 
 # Mybatis Notes
