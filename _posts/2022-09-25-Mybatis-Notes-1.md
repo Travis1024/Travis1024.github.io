@@ -1,5 +1,5 @@
 ---
-title: Mybatis Notes (3)
+title: Mybatis Notes 1
 author: Travis <Hongxu Wei>
 date: 2022-09-25 00:25:00 +0800
 categories: [Java Learning Space]
@@ -7,7 +7,7 @@ tags: [Mybatis]
 math: false
 ---
 
-# Mybatis Notes (3)
+# Mybatis Notes 1
 
 # 一、MyBatis概述
 
