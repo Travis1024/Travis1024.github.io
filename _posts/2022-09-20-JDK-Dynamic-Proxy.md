@@ -1,5 +1,5 @@
 ---
-title: JDK动态代理
+title: JDK Dynamic Proxy
 author: Travis <Hongxu Wei>
 date: 2022-09-20 20:25:00 +0800
 categories: [Java Learning Space]
@@ -7,7 +7,7 @@ tags: [动态代理]
 math: false
 ---
 
-## JDK动态代理
+## JDK Dynamic Proxy
 
 ### 1. 代码结构
 

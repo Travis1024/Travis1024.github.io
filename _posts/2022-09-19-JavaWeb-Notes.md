@@ -9,7 +9,7 @@ math: false
 
 # JavaWeb Notes
 
-> Source：动力节点老杜（JavaWeb）
+> Source：动力节点（JavaWeb）
 
 - 从JavaWEB开始。（Servlet为核心，从Servlet开始学习。）
 
