@@ -1,5 +1,5 @@
 ---
-title: Spring Notes <1>
+title: Spring Notes (1)
 author: Travis <Hongxu Wei>
 date: 2022-09-30 20:25:00 +0800
 categories: [Java Learning Space]
@@ -7,7 +7,7 @@ tags: [Spring]
 math: false
 ---
 
-## Spring Notes <1>
+## Spring Notes (1)
 
 > * 掌握Spring相关概念
 > * 完成IOC/DI的入门案例编写
