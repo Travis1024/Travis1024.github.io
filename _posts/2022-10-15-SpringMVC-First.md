@@ -3,7 +3,7 @@ title: SpringMVC (1)
 author: Travis <Hongxu Wei>
 date: 2022-10-15 20:25:00 +0800
 categories: [Java Learning Space]
-tags: [Spring]
+tags: [SpringMVC]
 math: false
 ---
 
