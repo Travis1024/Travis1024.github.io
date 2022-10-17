@@ -9,8 +9,6 @@ math: false
 
 # JavaWeb Notes
 
-> Source：动力节点（JavaWeb）
-
 - 从JavaWEB开始。（Servlet为核心，从Servlet开始学习。）
 
 - JSP（JSP使用较少了，但是还有用，所以时间上少一些。快速地学习一下JSP。）
@@ -3087,3 +3085,7 @@ public abstract class HttpServlet extends GenericServlet {
 5. 现存缺陷
    
    <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202209181845714.png"/>
+
+# 八、Source
+
+>   Source：动力节点（JavaWeb）
