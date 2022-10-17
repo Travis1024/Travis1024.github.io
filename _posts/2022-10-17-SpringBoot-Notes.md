@@ -19,23 +19,23 @@ math: false
 
 使用了 `Spring` 框架后已经简化了我们的开发。而 `SpringBoot` 又是对 `Spring` 开发进行简化的，可想而知 `SpringBoot` 使用的简单及广泛性。既然 `SpringBoot` 是用来简化 `Spring` 开发的，那我们就先回顾一下，以 `SpringMVC` 开发为例：
 
-1.   **创建工程，并在 `pom.xml` 配置文件中配置所依赖的坐标**
+1.   创建工程，并在pom.xml配置文件中配置所依赖的坐标
 
 <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202210170758444.png" style="zoom:45%"/>
 
-2.   **编写 `web3.0` 的配置类**
+2.   编写web3.0的配置类
 
 作为 `web` 程序，`web3.0` 的配置类不能缺少，而这个配置类还是比较麻烦的，代码如下
 
 <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202210170758428.png" style="zoom:45%"/>
 
-3.   **编写 `SpringMVC` 的配置类**
+3.   编写SpringMVC的配置类
 
 <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202210170759799.png" style="zoom:45%"/>
 
 ​	做到这只是将工程的架子搭起来。要想被外界访问，最起码还需要提供一个 `Controller` 类，在该类中提供一个方法。
 
-4.   **编写 `Controller` 类**
+4.   编写Controller类
 
 <img src="https://cdn.jsdelivr.net/gh/Travis1024/PicGo_image/202210170759974.png" style="zoom:45%"/>
 
