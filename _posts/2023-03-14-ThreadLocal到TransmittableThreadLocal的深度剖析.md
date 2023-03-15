@@ -9,7 +9,7 @@ math: false
 
 ## 1、ThreadLocal，InheritableThreadLocal，TransmittableThreadLocal简述
 
-当需要变量只生效于线程单位时，使用 TheadLocal 能很好的把变量在不同线程中隔离开来。浅浅分析一下 ThreadLocal --> InheritableThreadLocal --> TransmittableThreadLocal，这三者是依次推进的关系。`InheritableThreadLocal`对`ThreadLocal`做了拓展，`TransmittableThreadLocal`对`InheritableThreadLocal`做了拓展
+当需要变量只生效于线程单位时，使用 TheadLocal 能很好的把变量在不同线程中隔离开来。浅浅分析一下 ThreadLocal --> InheritableThreadLocal --> TransmittableThreadLocal，这三者是依次推进的关系。`InheritableThreadLocal`对`ThreadLocal`做了拓展，`TransmittableThreadLocal`对`InheritableThreadLocal`做了拓展。
 
 <img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303151448002.png" alt="image-20230314201409023" style="zoom: 25%;" />
 
