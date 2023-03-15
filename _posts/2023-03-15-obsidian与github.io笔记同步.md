@@ -29,7 +29,6 @@ function getAllFiles() {
 	do
 		file_full_path=$1"/"$file
 		echo ""
-		echo ""
 		echo "-----------------------file_full_path: $file_full_path-----------------------"
 
 		# 如果为文件
@@ -74,28 +73,28 @@ cd "/Users/travis/GithubProjects/Travis1024.github.io"
 
 echo ""
 echo ""
-echo "-------------Start Git Push Files-------------"
+echo "-------------------------Start Git Push Files-------------------------"
 
-echo "(1) start adding files"
+echo "-----> (1) start adding files"
 git add .
 sleep 0.5s
 
-echo "(2) get git status"
+echo "-----> (2) get git status"
 git status
 sleep 0.5s
 
-echo "(3) start commit"
-current_time=$(data "+%Y.%m.%d %H:%M:%S")
+echo "-----> (3) start commit"
+current_time=$(date "+%Y.%m.%d %H:%M:%S")
 git commit -m "update on $current_time"
 sleep 0.5s
 
-echo "(4) start push files"
+echo "-----> (4) start push files"
 git push
 
 if [ $? -eq 0 ]; then
-	echo "--------------Git Successfully!--------------"
+	echo "-------------------------Git Successfully!-------------------------"
 else
-	echo "------------------Git Error!-----------------"
+	echo "-----------------------------Git Error!-------------------------"
 fi
 ```
 
