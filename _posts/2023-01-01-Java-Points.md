@@ -21,7 +21,7 @@ math: false
 2. 与特定平台相关，一般无法移植到其他平台；
 3. 现有的C、C++、Objective等都属于编译型语言。
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303081608630.png" style="zoom:50%"/>
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303081608630.png" style="zoom:50%"/>
 
 **解释型语言**
 
@@ -35,7 +35,7 @@ math: false
 2. 只要平台提供相应的解释器，就可以运行源代码，所以可以方便源程序移植；
 3. Python等属于解释型语言。
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303081608060.png" style="zoom:40%"/>
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303081608060.png" style="zoom:40%"/>
 
 ## 2.JAVA内存块 (深入学习JVM)
 
@@ -84,7 +84,7 @@ JVM就是我们常说的java虚拟机，它是整个java实现跨平台的最核
 三者之间关系 
 JDK 包含JRE,    JRE包含JVM。
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303081608748.png" style="zoom:40%"/>
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303081608748.png" style="zoom:40%"/>
 
 我们开发的实际情况是：我们利用JDK（调用JAVA API）开发了属于我们自己的JAVA程序后，通过JDK中的编译程序（javac）将我们的文本java文件编译成JAVA字节码，在JRE上运行这些JAVA字节码，JVM解析这些字节码，映射到CPU指令集或OS的系统调用。
 
@@ -164,7 +164,7 @@ per = new Person(); // 实例化这个per对象
 **实例化** 指的是用关键词new来开辟内存空间。
 它们在内存中的划分是这样的：
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303081608237.png" style="zoom:40%"/>
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303081608237.png" style="zoom:40%"/>
 
 
 
@@ -238,7 +238,7 @@ per = new Person(); // 实例化这个per对象
 18 }
 ```
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303081608277.png" style="zoom:60%"/>
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303081608277.png" style="zoom:60%"/>
 
 ## 8.C、A、P定义
 
@@ -258,11 +258,11 @@ nacos保证了P，能够根据策略实现AP或者CP，官方推荐使用A，即
 
 ## 10.tomcat、springMVC
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303081614662.png"/>
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303081614662.png"/>
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303081614472.png"/>
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303081614472.png"/>
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303081614978.png"/>
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303081614978.png"/>
 
 
 

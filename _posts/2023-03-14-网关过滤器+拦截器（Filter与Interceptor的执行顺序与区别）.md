@@ -18,7 +18,7 @@ math: false
 
 请求路由后，会将三者合并到一个过滤器链（集合）中，排序后依次执行每个过滤器。
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303142030821.png" alt="image-20230314203032791" style="zoom:40%;" />
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303142030821.png" alt="image-20230314203032791" style="zoom:40%;" />
 
 **排序规则：**
 
@@ -32,4 +32,4 @@ math: false
 
 **Filter与Interceptor的执行顺序**
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303142037759.png" alt="image-20230314203733720" style="zoom:35%;" />
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303142037759.png" alt="image-20230314203733720" style="zoom:35%;" />

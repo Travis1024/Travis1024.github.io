@@ -9,7 +9,7 @@ math: false
 
 在使用obsidian-git插件时，能够commit，但是push时一直报错，如下：
 
-<img src="https://gitee.com/awtaling/images_repository/raw/master/202303082159061.jpg" alt="4421678277162_.pic" style="zoom:50%;" />
+<img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303082159061.jpg" alt="4421678277162_.pic" style="zoom:50%;" />
 
 提示信息是未能读取到用户名（注意此路径为https协议），按照{username}:{password}配置后，出现其他报错信息：
 

@@ -35,4 +35,4 @@ math: false
 
 - **鉴权流程图**
 
-  ![image-20230314092415495](https://gitee.com/awtaling/images_repository/raw/master/202303140924554.png)
+  ![image-20230314092415495](https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303140924554.png)
