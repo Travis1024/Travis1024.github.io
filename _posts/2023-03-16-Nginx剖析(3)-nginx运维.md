@@ -9,20 +9,6 @@ math: false
 
 # Nginx 运维
 
-<!-- TOC depthFrom:2 depthTo:3 -->
-
-- [Windows 安装](#windows-安装)
-- [Linux 安装](#linux-安装)
-  - [rpm 包方式（推荐）](#rpm-包方式推荐)
-  - [源码编译方式](#源码编译方式)
-- [Linux 开机自启动](#linux-开机自启动)
-  - [rpm 包方式](#rpm-包方式)
-  - [源码编译方式](#源码编译方式-1)
-- [脚本](#脚本)
-- [参考资料](#参考资料)
-
-<!-- /TOC -->
-
 ## 一、普通安装
 
 ### Windows 安装
