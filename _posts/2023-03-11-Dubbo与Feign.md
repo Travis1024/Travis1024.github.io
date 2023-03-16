@@ -3,7 +3,7 @@ title: Dubbo与Feign
 author: Travis <Hongxu Wei>
 date: 2023-03-11 22:12:25 +0800
 categories: [Java Learning Space]
-tags: [dubbo feign]
+tags: [dubbo, feign]
 math: false
 ---
 

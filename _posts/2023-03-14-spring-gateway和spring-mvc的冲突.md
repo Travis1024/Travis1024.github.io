@@ -3,7 +3,7 @@ title: spring-gateway和spring-mvc的冲突
 author: Travis <Hongxu Wei>
 date: 2023-03-14 11:27:55 +0800
 categories: [Java Learning Space]
-tags: [gateway mvc spring]
+tags: [gateway, mvc, spring]
 math: false
 ---
 

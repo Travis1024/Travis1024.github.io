@@ -3,7 +3,7 @@ title: RabbitMQ与Kafka
 author: Travis <Hongxu Wei>
 date: 2023-03-12 22:10:55 +0800
 categories: [Java Learning Space]
-tags: [rabbitmq kafka]
+tags: [rabbitmq, kafka]
 math: false
 ---
 

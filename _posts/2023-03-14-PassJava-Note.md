@@ -3,7 +3,7 @@ title: PassJava Note
 author: Travis <Hongxu Wei>
 date: 2023-03-14 22:14:54 +0800
 categories: [Java Learning Space]
-tags: [passjava project]
+tags: [passjava, project]
 math: false
 ---
 

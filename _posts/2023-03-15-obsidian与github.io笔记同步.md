@@ -3,7 +3,7 @@ title: obsidian与github.io笔记同步
 author: Travis <Hongxu Wei>
 date: 2023-03-15 16:42:19 +0800
 categories: [DailyNotes Space]
-tags: [obsidian github]
+tags: [obsidian, github]
 math: false
 ---
 obsidian笔记仓库的结构如下，其中TravisNotes为obsidian仓库：
