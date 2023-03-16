@@ -1384,11 +1384,6 @@ In this chapter I will talk about some of the Nginx hardening approaches and sec
 
 > Most modern GNU/Linux distros will not push the latest version of Nginx into their default package lists so maybe you should consider install it from sources.
 
-#### External resources
-
-- [Installing from prebuilt packages (from this handbook)](HELPERS.md#installing-from-prebuilt-packages)
-- [Installing from source (from this handbook)](HELPERS.md#installing-from-source)
-
 ### :beginner: Run as an unprivileged user
 
 #### Rationale
@@ -1752,7 +1747,7 @@ certbot certonly -d domain.com -d www.domain.com
 
 **My recommendation:**
 
-> Use only [TLSv1.3 and TLSv1.2](#keep-only-tls1.2-tls13).
+> Use only [TLSv1.3 and TLSv1.2]
 
 #### Example
 
@@ -1840,7 +1835,7 @@ ssl_protocols TLSv1.2 TLSv1.1;
 
 **My recommendation:**
 
-> Use only [TLSv1.3 and TLSv1.2](#keep-only-tls1.2-tls13) with below cipher suites:
+> Use only [TLSv1.3 and TLSv1.2] with below cipher suites:
 
 ```nginx
 ssl_ciphers "TLS13-CHACHA20-POLY1305-SHA256:TLS13-AES-256-GCM-SHA384:TLS13-AES-128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256";
@@ -1962,7 +1957,7 @@ ssl_ciphers 'ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECD
 
 **My recommendation:**
 
-> Use only [TLSv1.3 and TLSv1.2](#keep-only-tls1.2-tls13) and [only strong ciphers](#use-only-strong-ciphers) with above curves:
+> Use only [TLSv1.3 and TLSv1.2] and [only strong ciphers] with above curves:
 
 ```nginx
 ssl_ecdh_curve X25519:secp521r1:secp384r1:prime256v1;
