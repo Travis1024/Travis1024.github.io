@@ -271,3 +271,13 @@ nacos保证了P，能够根据策略实现AP或者CP，官方推荐使用A，即
 ## 12.redis使用lua脚本为什么能保证原子性？
 
 脚本的原子性：Redis使用（支持）相同的Lua解释器，来运行所有的命令。Redis还保证脚本以原子方式执行：在执行脚本时，不会执行其他脚本或Redis命令。这个语义类似于MULTI（开启事务）/EXEC（触发事务，一并执行事务中的所有命令）。从所有其他客户端的角度来看，脚本的效果要么仍然不可见，要么已经完成。
+
+## 13.@Retention生命周期
+
+![image-20230316221327387](https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202303162213467.png)
+
+-   周期长度是SOURCE < CLASS < RUNTIME,所以前者能作用到的地方后者一定能作用到
+-   @Override是让编译器检查当前方法是否在覆盖父类方法，@SupressWarnings也只是为了抑制代码警告，在代码编译后就都没有什么作用，因此不需要写入.class文件。
+-   @ButterKnife会在编译时生成辅助代码，所以用RetentionPolicy.CLASS修饰。
+-   **RetentionPolicy.CLASS是默认生命周期**，没有被@Retention修饰的注解的生命周期都是这种策略。
+-   RetentionPolicy.RUNTIME修饰的注解处理器可以通过**反射**获取该注解的属性值，从而做一些运行时的逻辑处理。
