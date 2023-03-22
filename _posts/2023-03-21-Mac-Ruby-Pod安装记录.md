@@ -381,5 +381,5 @@ rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://
 
 ## 参考链接
 
-- [Failed to connect to raw.githubusercontent.com:443 - 知乎](https://zhuanlan.zhihu.com/p/115450863) 评论区
+- [Failed to connect to raw.githubusercontent.com:443 - 知乎](https://zhuanlan.zhihu.com/p/115450863) 见评论区
 - [mac ruby下载](https://www.jianshu.com/p/c073e6fc01f5)
