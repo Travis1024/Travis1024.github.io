@@ -378,6 +378,21 @@ rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://
 
 
 
+### pod install or pod update
+
+```bash
+# 只安装新添加的库
+pod install --verbose --no-repo-update
+
+# 会在安装相关库时 更新其他库版本
+pod update --verbose --no-repo-update
+
+# 只更新指定的库，其它库忽略
+pod update 库名 --verbose --no-repo-update
+```
+
+
+
 
 ## 参考链接
 
