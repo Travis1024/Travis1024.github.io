@@ -15,3 +15,10 @@ uname -a
 Linux travis1024 5.4.0-139-generic #156~18.04.1-Ubuntu SMP Wed Jan 25 15:56:22 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
+
+## 2、Mac查看端口调用
+
+```bash
+lsof -i tcp:8081
+```
+
