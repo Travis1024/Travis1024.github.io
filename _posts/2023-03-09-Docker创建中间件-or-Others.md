@@ -153,3 +153,14 @@ docker exec -it zookeeper zkCli.sh
 ```
 
 [docker配置zookeeper参考链接](https://blog.csdn.net/duyun0/article/details/128437451)
+
+
+
+# Nacos
+
+启动命令：
+
+```shell
+docker run --name nacos -p 8848:8848 -p 9848:9848 -p 9849:9849 -e MODE=standalone -e JVM_XMS=128m -e JVM_XMX=128m -v /mydata/nacos/logs:/home/nacos/logs -v /mydata/nacos/conf/application.properties:/home/nacos/conf/application.properties -d nacos/nacos-server:latest
+```
+
