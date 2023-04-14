@@ -164,3 +164,222 @@ docker exec -it zookeeper zkCli.sh
 docker run --name nacos -p 8848:8848 -p 9848:9848 -p 9849:9849 -e MODE=standalone -e JVM_XMS=128m -e JVM_XMX=128m -v /mydata/nacos/logs:/home/nacos/logs -v /mydata/nacos/conf/application.properties:/home/nacos/conf/application.properties -d nacos/nacos-server:latest
 ```
 
+
+
+# MongoDB
+
+版本号：mongo：4.4
+
+## · 安装
+
+1. 拉取镜像
+
+   ```shell
+    docker pull mongo:4.4
+   ```
+
+2. 创建mongo数据持久化目录
+
+   ```shell
+   mkdir -p /mydata/mongo/data
+   ```
+
+3. 运行容器
+
+   ```shell
+   docker run -itd --name mongo -v /mydata/mongo/data:/data/db -p 27017:27017 mongo:4.4 --auth
+   ```
+
+## · 创建用户
+
+## · 连接测试
+
+## · springboot整合mongodb
+
+[Docker安装mongoDB及使用](https://blog.csdn.net/packge/article/details/126539320)
+
+
+
+# Sentinel
+
+
+
+# Seata
+
+```shell
+docker run -d -p 8091:8091 -p 7091:7091  --name seata-serve seataio/seata-server:1.6.1
+```
+
+```shell
+docker cp b1b237:/seata-server/resources /mydata/seata/config
+```
+
+```shell
+docker stop + docker rm
+```
+
+```shell
+docker run --name seata-serve -p 8091:8091 -p 7091:7091 -e SEATA_IP=宿主机IP -v /mydata/seata/config/resources:/seata-server/resources -v /mydata/seata/sessionStore:/seata-server/sessionStore -d seataio/seata-server:1.6.1
+```
+
+⚠️⚠️ 需要设置 -e SEATA_IP=宿主机IP，否则在nacos上注册的地址是局域网的地址
+
+- 修改application.yml配置文件
+
+  ```yaml
+  server:
+    port: 7091
+  
+  spring:
+    application:
+      name: seata-server
+  
+  logging:
+    config: classpath:logback-spring.xml
+    file:
+      path: ${user.home}/logs/seata
+    extend:
+      logstash-appender:
+        destination: 127.0.0.1:4560
+      kafka-appender:
+        bootstrap-servers: 127.0.0.1:9092
+        topic: logback_to_logstash
+  
+  console:
+    user:
+      username: seata
+      password: seata
+  
+  seata:
+    config:
+      # support: nacos 、 consul 、 apollo 、 zk  、 etcd3
+      type: nacos
+      nacos:
+        server-addr: 宿主机IP:8848
+        namespace: 64e29a8b-edd7-4f60-b941-24111fb1081c
+        group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
+        context-path:
+        ##if use MSE Nacos with auth, mutex with username/password attribute
+        #access-key:
+        #secret-key:
+        data-id: seataServer.properties
+    registry:
+      # support: nacos 、 eureka 、 redis 、 zk  、 consul 、 etcd3 、 sofa
+      type: nacos
+      preferred-networks: 30.240.*
+      nacos:
+        application: seata-server
+        server-addr: 宿主机IP:8848
+        group: DEFAULT_GROUP
+        namespace: 64e29a8b-edd7-4f60-b941-24111fb1081c
+        cluster: default
+        username: nacos
+        password: nacos
+        context-path:
+        ##if use MSE Nacos with auth, mutex with username/password attribute
+        #access-key:
+        #secret-key:
+    server:
+      service-port: 8091 #If not configured, the default is '${server.port} + 1000'
+      max-commit-retry-timeout: -1
+      max-rollback-retry-timeout: -1
+      rollback-retry-timeout-unlock-enable: false
+      enable-check-auth: true
+      enable-parallel-request-handle: true
+      retry-dead-threshold: 130000
+      xaer-nota-retry-timeout: 60000
+      enableParallelRequestHandle: true
+      recovery:
+        committing-retry-period: 1000
+        async-committing-retry-period: 1000
+        rollbacking-retry-period: 1000
+        timeout-retry-period: 1000
+      undo:
+        log-save-days: 7
+        log-delete-period: 86400000
+      session:
+        branch-async-queue-size: 5000 #branch async remove queue size
+        enable-branch-async-remove: false #enable to asynchronous remove branchSession
+    store:
+      # support: file 、 db 、 redis
+      mode: file
+      session:
+        mode: file
+      lock:
+        mode: file
+      file:
+        dir: sessionStore
+        max-branch-session-size: 16384
+        max-global-session-size: 512
+        file-write-buffer-cache-size: 16384
+        session-reload-read-size: 100
+        flush-disk-mode: async
+    security:
+      secretKey: SeataSecretKey0c382ef121d778043159209298fd40bf3850a017
+      tokenValidityInMilliseconds: 1800000
+      ignore:
+        urls: /,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/api/v1/auth/login
+  ```
+
+- maven依赖版本
+
+  ```xml
+  <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+      <version>2021.0.5.0</version>
+  </dependency>
+  ```
+
+- nacos注册中心要配置的内容
+
+  <img src="https://travisnotes.oss-cn-shanghai.aliyuncs.com/mdpic/202304140926486.png" alt="image-20230414092611286" style="zoom:50%;" />
+
+
+
+[分布式框架seata的使用](https://blog.csdn.net/qq_15717719/article/details/123087819)
+
+[官网部署文档](https://seata.io/zh-cn/docs/ops/deploy-guide-beginner.html)
+
+
+
+# ElasticSearch
+
+[docker安装配置elasticSearch](https://blog.csdn.net/huanglu0314/article/details/124535763)
+
+[docker安装配置elasticSearch2](https://blog.csdn.net/qq_40942490/article/details/111594267)
+
+```
+docker run --name elasticsearch \
+-p 9200:9200 -p 9300:9300 \
+-e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" \
+-d elasticsearch:7.16.2
+```
+
+```
+docker cp elasticsearch:/usr/share/elasticsearch/config/ /mydata/elasticsearch/
+docker cp elasticsearch:/usr/share/elasticsearch/data/ /mydata/elasticsearch/
+docker cp elasticsearch:/usr/share/elasticsearch/logs/ /mydata/elasticsearch/
+docker cp elasticsearch:/usr/share/elasticsearch/plugins/ /mydata/elasticsearch/
+```
+
+```
+docker stop + docker rm
+```
+
+```
+docker run --name elasticsearch \
+-p 9200:9200 -p 9300:9300 \
+-e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" \
+-v /mydata/elasticsearch/config:/usr/share/elasticsearch/config \
+-v /mydata/elasticsearch/data:/usr/share/elasticsearch/data \
+-v /mydata/elasticsearch/plugins:/usr/share/elasticsearch/plugins \
+-v /mydata/elasticsearch/logs:/usr/share/elasticsearch/logs \
+--privileged=true -d elasticsearch:7.16.2
+```
+
+
+
+# kibana
