@@ -354,19 +354,10 @@ Cglib代理也叫作子类代理，他是通过在内存中构建一个子类，
 
 ℹ️	cglib代理简单实现
 
-- 创建被代理类接口
-
-  ```java
-  public interface Hello { //被代理接口
-      void sayHello();//被代理方法
-  }
-  ```
-
 - 创建被代理类HelloImpl
 
   ```java
-  public class HelloImpl implements Hello { // 实现接口
-      @Override
+  public class HelloImpl{
       public void sayHello() {
           // 你要写的业务代码
           System.out.println("Hello World");
@@ -406,18 +397,18 @@ Cglib代理也叫作子类代理，他是通过在内存中构建一个子类，
   public class AA {
       public static void main(String[] args) {
           //创建被代理对象
-          HelloImpl hello = new HelloImpl();
+          HelloImpl helloImpl = new HelloImpl();
           //创建代理类
-          Cglib cglib=new Cglib(hello);
+          MyMethodInterceptor interceptor = new MyMethodInterceptor(helloImpl);
           //可以通过Enhancer对象中的create()方法可以去生成一个类，用于生成代理对象
           Enhancer enhancer=new Enhancer();
           //设置父类(将被代理类作为代理类的父类)
-          enhancer.setSuperclass(hello.getClass());
+          enhancer.setSuperclass(helloImpl.getClass());
         	//设置拦截器(代理类中的intercept就是)
-          enhancer.setCallback(cglib);
+          enhancer.setCallback(interceptor);
    
         	//生成一个被代理类的子类对象
-          Hello proxyHello = (Hello) enhancer.create();
+          HelloImpl proxyHelloImpl = (HelloImpl) enhancer.create();
           
           // 调用代理方法
           proxyHello.sayHello();
