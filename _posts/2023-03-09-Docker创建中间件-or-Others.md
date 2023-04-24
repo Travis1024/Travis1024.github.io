@@ -383,3 +383,41 @@ docker run --name elasticsearch \
 
 
 # kibana
+
+
+
+
+
+# Nginx
+
+- Docker 拉取 nginx 镜像
+
+  ```shell
+  docker pull nginx
+  ```
+
+- 启动 nginx 容器
+
+  ```shell
+  docker run -d --name nginx nginx:latest
+  ```
+
+- 把计划挂载的文件夹进行 cp, /mydata/nginx 文件夹下有 conf、log、html 三个目录
+
+  ```shell
+  docker cp 2aa9:/etc/nginx /mydata/nginx/conf
+  docker cp 2aa9:/usr/share/nginx/html /mydata/nginx
+  docker cp 2aa9:/var/log /mydata/nginx
+  ```
+
+- 删除 nginx 容器，重新运行新的容器，并进行挂载
+
+  ```shell
+  docker rm ***
+  ```
+
+  ```
+  docker run -d -p 5000:80 --name nginx --restart=always -v /mydata/nginx/conf/nginx:/etc/nginx -v /mydata/nginx/html:/usr/share/nginx/html -v /mydata/nginx/log:/var/log nginx:latest
+  ```
+
+  

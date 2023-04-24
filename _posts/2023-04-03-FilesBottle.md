@@ -26,3 +26,14 @@
 - seata在nacos中的配置文件
 
 - 开启多线程任务之后的bean注入问题：spring为了安全性，禁止线程之间的bean共享
+
+
+
+- dubbo 远程访问不到服务器中部署的服务
+
+  - ```shell
+    nohup java -jar -DDUBBO_IP_TO_REGISTRY=140.246.171.8 ./filesbottle-ffmpeg-1.0.0-SNAPSHOT.jar --spring.profiles.active=pro > ffmpeg.log &
+    ```
+
+  - dubbo.protocol.port = 20880，需要开放服务器的 20880端口
+
