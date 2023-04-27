@@ -421,3 +421,84 @@ docker run --name elasticsearch \
   ```
 
   
+
+
+
+# RocketMq
+
+1. 在宿主机创建需要挂载的目录
+
+   ```shell
+   mkdir -p /data/mydata/rocketmq/nameserver/logs
+   mkdir -p /data/mydata/rocketmq/nameserver/store
+   
+   mkdir -p /data/mydata/rocketmq/broker/logs
+   mkdir -p /data/mydata/rocketmq/broker/store
+   mkdir -p /data/mydata/rocketmq/broker/conf
+   ```
+
+2. 在 conf 路径下创建需要挂载的 broker.conf 配置文件
+
+   ```properties
+   # mq集群名称，注意这里进行了更改
+   brokerClusterName = FilesBottleCluster
+   #broker名称，master和slave使用相同的名称，表明他们的主从关系
+   brokerName = broker-master
+   #0表示Master，大于0表示不同的slave
+   brokerId = 0
+   #表示几点做消息删除动作，默认是凌晨4点
+   deleteWhen = 00
+   #在磁盘上保留消息的时长，单位是小时
+   fileReservedTime = 72
+   #有三个值：SYNC_MASTER，ASYNC_MASTER，SLAVE；同步和异步表示Master和Slave之间同步数据的机制；
+   brokerRole = ASYNC_MASTER
+   #刷盘策略，取值为：ASYNC_FLUSH，SYNC_FLUSH表示同步刷盘和异步刷盘；SYNC_FLUSH消息写入磁盘后才返回成功状态，ASYNC_FLUSH不需要；
+   flushDiskType = ASYNC_FLUSH
+   #设置broker节点所在服务器的ip地址(公网IP)，win系统下，用ipconfig查一下你的主机ip
+   brokerIP1 = xxx.xxx.xxx.xxx
+   # 是否允许 Broker 自动创建 Topic，建议线下开启，线上关闭 ！！！这里仔细看是 false，false，false
+   autoCreateTopicEnable=true
+   # 是否允许 Broker 自动创建订阅组，建议线下开启，线上关闭
+   autoCreateSubscriptionGroup=true
+   # Broker 对外服务的监听端口
+   listenPort=10911
+   # 补充
+   # 磁盘使用达到95%之后,生产者再写入消息会报错 CODE: 14 DESC: service not available now, maybe disk full diskMaxUsedSpaceRatio=95
+   ```
+
+3. 拉取镜像 
+
+   ```shell
+   # nameserver + broker
+   docker pull apache/rocketmq:4.9.4
+   # 可视化
+   docker pull apacherocketmq/rocketmq-dashboard:1.0.0
+   ```
+
+4. 启动 docker 容器
+
+   ```shell
+   # nameserver
+   docker run -d --restart=always --name rmq_nameserver -p 9876:9876 -v /data/mydata/rocketmq/nameserver/logs:/home/rocketmq/logs -v /data/mydata/rocketmq/nameserver/store:/home/rocketmq/store -e "MAX_POSSIBLE_HEAP=100000000" apache/rocketmq:4.9.4 sh mqnamesrv
+   ```
+
+   ```shell
+   # broker
+   docker run -d --restart=always --name rmq_broker --link rmq_nameserver:nameserver -p 10911:10911 -p 10909:10909 -v /data/mydata/rocketmq/broker/logs:/home/rocketmq/logs -v /data/mydata/rocketmq/broker/store:/home/rocketmq/store -v /data/mydata/rocketmq/broker/conf/broker.conf:/home/rocketmq/rocketmq-4.9.4/conf/broker.conf -e "NAMESRV_ADDR=nameserver:9876" -e "MAX_POSSIBLE_HEAP=200000000" apache/rocketmq:4.9.4 sh mqbroker -c ../conf/broker.conf
+   ```
+
+   ```shell
+   # dashboard
+   docker run -d --name rocketmq-dashboard -e "JAVA_OPTS=-Drocketmq.namesrv.addr=服务器公网 ip:9876" -p 9999:8080 -t apacherocketmq/rocketmq-dashboard:1.0.0
+   ```
+
+5. ⚠️ 注意需要开放服务器的 9876、10911、10909、9999（自定）端口
+
+6. [参考：rocketmq 4.9.4 docker部署](https://cloud.tencent.com/developer/article/2157853?from=15425&areaSource=102001.1&traceId=qkkLPmu9xMHLB14XQUM2y)
+
+​	
+
+
+
+
+
