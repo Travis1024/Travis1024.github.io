@@ -146,7 +146,7 @@ doCreateBean方法创建实例，用反射技术创建，这个没什么好说�
 
 **返回true ：** 如果返回true，postProcessPropertyValues就会被执行
 
-### 4、属性修改
+### 4、属性修改（bean 属性）
 
 方法名称 ：**InstantiationAwareBeanPostProcessor.PropertyValues postProcessPropertyValues(PropertyValues pvs, PropertyDescriptor[] pds, Object bean, String beanName)**
 
@@ -512,7 +512,7 @@ private ApplicationContext applicationContext;
 
 ### 8、执行初始化方法
 
-初始化方法有三个，分别是 添加了@PostConstruct 注解的方法、实现InitializingBean接口、在@bean注解上添加 initMethod属性；我们一个个讲
+**初始化方法有三个，分别是 添加了@PostConstruct 注解的方法、实现InitializingBean接口、在@bean注解上添加 initMethod属性；我们一个个讲**
 
 ### 9、初始化方法一：@PostConstruct
 
@@ -762,7 +762,7 @@ public class BeanTest {
     }
     // 将要执行的销毁方法
     public void destroyMethod_1(){
-        System.out.println("我是beanTest的init方法");
+        System.out.println("我是beanTest的destroy方法");
     }
 }
 ```

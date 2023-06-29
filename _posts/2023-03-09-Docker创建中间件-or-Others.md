@@ -82,6 +82,101 @@ docker update {容器id} --restart=always
 
 
 
+# Mysql8
+
+## 1、下载镜像
+
+```
+docker pull mysql:8.0.32
+```
+
+
+
+## 2、创建本地挂载目录（4 个）
+
+```
+mkdir -p /data/mysql/conf
+mkdir -p /data/mysql/data
+mkdir -p /data/mysql/log
+mkdir -p /data/mysql/mysql-files
+```
+
+
+
+## 3、创建配置文件
+
+在 conf 文件夹下 vim my.cnf
+
+```properties
+[client]
+port = 3306
+default-character-set = utf8mb4
+ 
+[mysql]
+port = 3306
+default-character-set = utf8mb4
+ 
+[mysqld]
+# bind-address = 0.0.0.0
+# port = 3306
+
+# 设置最大连接数
+max_connections=10000
+
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+ 
+# 设置时区和字符集
+# default-time-zone='+8:00'
+character-set-client-handshake=FALSE
+init_connect='SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci'
+ 
+gtid-mode=ON
+enforce-gtid-consistency = ON
+```
+
+
+
+## 4、启动容器
+
+```shell
+docker run --restart=always --name mysql8 -v /data/mydata/mysql/conf:/etc/mysql/conf.d -v /data/mydata/mysql/data:/var/lib/mysql -v /data/mydata/mysql/log:/var/log -v /data/mydata/mysql/mysql-files:/var/lib/mysql-files -p 3307:3306 -e MYSQL_ROOT_PASSWORD='123456' -d mysql:8.0.32
+```
+
+
+
+## 5、增加远程访问权限
+
+```
+mysql -u root -p
+ 
+mysql> use mysql;
+mysql> update user set host = '%' where user ='root';
+mysql> flush privileges;
+mysql> exit
+```
+
+
+
+## 6、修改两个 root 用户的密码
+
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY '新密码';
+ALTER USER 'root'@'%' IDENTIFIED BY '123456';
+```
+
+
+
+## 7、查看 root 用户的相关信息
+
+```
+select host, user, authentication_string, plugin from user; 
+```
+
+
+
+
+
 # Zookeeper
 
 ## 1、下载镜像
@@ -168,31 +263,48 @@ docker run --name nacos -p 8848:8848 -p 9848:9848 -p 9849:9849 -e MODE=standalon
 
 # MongoDB
 
-版本号：mongo：4.4
+版本号：mongo：4.4 / 6.0
 
 ## · 安装
 
 1. 拉取镜像
 
    ```shell
-    docker pull mongo:4.4
+    docker pull mongo:6.0
    ```
 
 2. 创建mongo数据持久化目录
 
    ```shell
-   mkdir -p /mydata/mongo/data
+   mkdir -p /data/mydata/mongo/data
    ```
 
 3. 运行容器
 
    ```shell
-   docker run -itd --name mongo -v /mydata/mongo/data:/data/db -p 27017:27017 mongo:4.4 --auth
+   docker run -itd --name mongo -v /data/mydata/mongo/data:/data/db -p 27017:27017 mongo:4.4 --auth
    ```
 
 ## · 创建用户
 
-## · 连接测试
+1. 进入容器
+
+   ```
+   docker exec -it mongo mongosh admin
+   ```
+
+2. 创建新用户
+
+   ```shell
+   db.createUser({ user:'root',pwd:'123456',roles:[ { role:'userAdminAnyDatabase', db: 'admin'},'readWriteAnyDatabase']});
+   ```
+
+3. 修改密码
+
+   ```shell
+   db.auth("root","123456")
+   db.changeUserPassword('root','w1270278575')
+   ```
 
 ## · springboot整合mongodb
 
@@ -202,7 +314,25 @@ docker run --name nacos -p 8848:8848 -p 9848:9848 -p 9849:9849 -e MODE=standalon
 
 # Sentinel
 
+- 查询 Sentinel 版本
 
+  ```shell
+  docker search sentinel
+  ```
+
+- 拉取 Sentinel 镜像
+
+  ```shell
+  docker pull bladex/sentinel-dashboard
+  ```
+
+- 运行 Sentinel 容器
+
+  ```shell
+  docker run -itd --name sentinel -p 8858:8858 bladex/sentinel-dashboard
+  ```
+
+  
 
 # Seata
 
@@ -351,6 +481,8 @@ docker run --name seata-serve -p 8091:8091 -p 7091:7091 -e SEATA_IP=宿主机IP 
 
 [docker安装配置elasticSearch2](https://blog.csdn.net/qq_40942490/article/details/111594267)
 
+[elasticsearch + ik分词器 + kibana](https://juejin.cn/post/7141271047562592264)
+
 ```
 docker run --name elasticsearch \
 -p 9200:9200 -p 9300:9300 \
@@ -363,6 +495,9 @@ docker cp elasticsearch:/usr/share/elasticsearch/config/ /mydata/elasticsearch/
 docker cp elasticsearch:/usr/share/elasticsearch/data/ /mydata/elasticsearch/
 docker cp elasticsearch:/usr/share/elasticsearch/logs/ /mydata/elasticsearch/
 docker cp elasticsearch:/usr/share/elasticsearch/plugins/ /mydata/elasticsearch/
+
+# 保证权限
+chmod -R 777 /mydata/elasticsearch/
 ```
 
 ```
@@ -370,19 +505,43 @@ docker stop + docker rm
 ```
 
 ```
-docker run --name elasticsearch \
+docker run -itd --name elasticsearch \
 -p 9200:9200 -p 9300:9300 \
 -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" \
--v /mydata/elasticsearch/config:/usr/share/elasticsearch/config \
--v /mydata/elasticsearch/data:/usr/share/elasticsearch/data \
--v /mydata/elasticsearch/plugins:/usr/share/elasticsearch/plugins \
--v /mydata/elasticsearch/logs:/usr/share/elasticsearch/logs \
---privileged=true -d elasticsearch:7.16.2
+-v /data/mydata/elasticsearch/config:/usr/share/elasticsearch/config \
+-v /data/mydata/elasticsearch/data:/usr/share/elasticsearch/data \
+-v /data/mydata/elasticsearch/plugins:/usr/share/elasticsearch/plugins \
+-v /data/mydata/elasticsearch/logs:/usr/share/elasticsearch/logs \
+--privileged=true elasticsearch:7.16.2
 ```
 
 
 
 # kibana
+
+- 拉取 kibana 镜像
+
+  ```shell
+  # 注意和 ElasticSearch 的版本
+  docker pull kibana:7.16.2
+  ```
+
+- 创建并启动容器
+
+  ```shell
+  docker run -itd --name kibana -e ELASTICSEARCH_HOSTS=http://IP:9200 -p 5601:5601 kibana:7.16.2
+  ```
+
+- 进入容器修改语言配置
+
+  ```shell
+  docker exec -it kibana /bin/bash
+  
+  # 进入 config 文件夹，找到 kibana.yml 配置文件，在kibana.yml文件添加中文语言设置
+  i18n.locale: "zh-CN"
+  ```
+
+- 重新启动 kibana 容器
 
 
 
@@ -417,7 +576,7 @@ docker run --name elasticsearch \
   ```
 
   ```
-  docker run -d -p 5000:80 --name nginx --restart=always -v /mydata/nginx/conf/nginx:/etc/nginx -v /mydata/nginx/html:/usr/share/nginx/html -v /mydata/nginx/log:/var/log nginx:latest
+  docker run -d -p 5000:80 --name nginx --restart=always -v /mydata/nginx/conf:/etc/nginx -v /mydata/nginx/html:/usr/share/nginx/html -v /mydata/nginx/log:/var/log nginx:latest
   ```
 
   
@@ -498,7 +657,26 @@ docker run --name elasticsearch \
 
 ​	
 
+# Redis
 
+- 在宿主机创建需要挂载的目录
 
+  ```shell
+  mkdir -p /data/mydata/redis/conf
+  mkdir -p /data/mydata/redis/data
+  ```
 
+- conf下创建配置文件redis.conf
 
+  ```ini
+  requirepass 123456 # 设置密码
+  appendonly yes # 持久化
+  ```
+
+- 启动 redis
+
+  ```shell
+  docker run --name redis -p 3796:6379 -v /data/mydata/redis/conf/redis.conf:/etc/redis/redis.conf -v /data/mydata/redis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
+  ```
+
+  

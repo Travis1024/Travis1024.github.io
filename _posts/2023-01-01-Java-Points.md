@@ -281,3 +281,8 @@ nacos保证了P，能够根据策略实现AP或者CP，官方推荐使用A，即
 -   @ButterKnife会在编译时生成辅助代码，所以用RetentionPolicy.CLASS修饰。
 -   **RetentionPolicy.CLASS是默认生命周期**，没有被@Retention修饰的注解的生命周期都是这种策略。
 -   RetentionPolicy.RUNTIME修饰的注解处理器可以通过**反射**获取该注解的属性值，从而做一些运行时的逻辑处理。
+
+
+
+## 14.为什么 HashMap 是线程不安全？
+
