@@ -679,4 +679,30 @@ docker run -itd --name elasticsearch \
   docker run --name redis -p 3796:6379 -v /data/mydata/redis/conf/redis.conf:/etc/redis/redis.conf -v /data/mydata/redis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
   ```
 
+
+
+
+
+
+# Minio
+
+
+
+
+
+- 创建 minio 容器并运行
+
+  ```shell
+  docker run -p 9000:9000 -p 9090:9090 \
+       --net=host \
+       --name minio \
+       -d --restart=always \
+       -e "MINIO_ACCESS_KEY=admin" \
+       -e "MINIO_SECRET_KEY=admin" \
+       -v /home/minio/data:/data \
+       -v /home/minio/config:/root/.minio \
+       minio/minio server \
+       /data --console-address ":9090" -address ":9000"
+  ```
+
   
