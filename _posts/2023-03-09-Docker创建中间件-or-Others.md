@@ -766,3 +766,34 @@ configure arguments:
 
   
 
+# xxl-job-admin
+
+- github中下载 xxl-job-admin/docs/db下的 sql 文件， 运行 sql 文件
+
+- 下载镜像文件（⚠️一定要指定版本号，因为官网没有设置默认的 lastest 版本）
+
+  ```shell
+  docker pull xuxueli/xxl-job-admin:2.4.0
+  ```
+
+- 创建文件夹
+
+  ```shell
+  mkdir -p /data/mydata/xxl-job-admin/applogs
+  ```
+
+- 创建容器（主要是指定 mysql 地址及账号密码）
+
+  ```shell
+  docker run -itd -e PARAMS="--spring.datasource.url=jdbc:mysql://x.x.x.x:x/xxl_job?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai --spring.datasource.username=root --spring.datasource.password=xxxx" -p 9080:8080 -v /mydata/xxl-job-admin/applogs:/data/applogs --name xxl-job-admin xuxueli/xxl-job-admin:2.4.0
+  ```
+
+- 访问网页
+
+  ```
+  http://localhost:9080/xxl-job-admin
+  admin
+  123456
+  ```
+
+  

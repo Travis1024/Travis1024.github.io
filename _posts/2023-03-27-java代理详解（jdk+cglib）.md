@@ -411,7 +411,7 @@ Cglib代理也叫作子类代理，他是通过在内存中构建一个子类，
           HelloImpl proxyHelloImpl = (HelloImpl) enhancer.create();
           
           // 调用代理方法
-          proxyHello.sayHello();
+          proxyHelloImpl.sayHello();
       }
   }
   ```
